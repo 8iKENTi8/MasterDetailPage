@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MasterDetail.MainPage"
+             Title="Vladimir">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" BackgroundColor="#26a69a">
+            <ContentPage.Content>
+                <StackLayout Padding="5,30,5,5">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                        <Image WidthRequest="65" HeightRequest="65"
+                               Aspect="AspectFit" Source="profile.png"
+                               VerticalOptions="Center"> </Image>
+                        <Label Text="User" VerticalOptions="Center" FontSize="Title"></Label>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand">
+                        <Image WidthRequest="24" HeightRequest="24"
+                               Aspect="AspectFit" Source="news.png"
+                               HorizontalOptions="Start"></Image>
+                        <Button Text="Новости" Clicked="Button_Clicked" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal"
+                                 HorizontalOptions="FillAndExpand">
+                        <Image WidthRequest="24" HeightRequest="24"
+                               Aspect="AspectFit" Source="speak.png"
+                               HorizontalOptions="Start"></Image>
+                        <Button Text="Друзья" Clicked="Button_Clicked_1" 
+                                HorizontalOptions="FillAndExpand"></Button>
+                    </StackLayout>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+
+
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <Label Text="DatailPage" VerticalOptions="Center" HorizontalOptions="Center"></Label>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
